@@ -1,0 +1,28 @@
+{% extends "home/base.html" %}
+{% block title %}
+Post | Blogsite
+{% endblock %}
+
+{% block content %}
+<center>
+  <div class="container-fluid">
+    <form method="POST" action="/post/" class="register">
+    <center><h2>Add your Post {{data}}</h2></center>
+    {% csrf_token %}
+  <div class="form-group">
+    <label for="formGroupExampleInput">Title</label>
+    <input type="text" name="title" class="form-control" id="formGroupExampleInput" placeholder="Title" required>
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Content</label>
+    <textarea name="content" class="form-control" id="formGroupExampleInput2"rows="5" placeholder="Content" required></textarea>
+  </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+</center> 
+{% endblock  %}
+
+
+  

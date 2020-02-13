@@ -1,0 +1,17 @@
+{% extends "home/base.html" %}
+
+
+{% block title %}
+Contact Us | Blogsite
+{% endblock  %}
+
+{% block  content%}
+<form method="POST" action="" class="register">
+  {% csrf_token %}
+
+  {{form}}
+  <input type="submit" value="Submit">
+</form>
+{% endblock %}
+
+  	
